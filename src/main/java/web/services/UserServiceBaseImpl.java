@@ -5,8 +5,9 @@ import web.entities.User;
 import web.repositories.UserRepository;
 
 import java.util.List;
+
 @Service
-public class UserServiceBaseImpl implements UserService{
+public class UserServiceBaseImpl implements UserService {
 
     private final UserRepository userRepository;
 

@@ -60,7 +60,7 @@ public class DBConfig {
     }
 
     public Properties getHibernateProperties() {
-        try (InputStream is = getClass().getClassLoader().getResourceAsStream("hibernate.properties");){
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream("hibernate.properties");) {
             Properties properties = new Properties();
             properties.load(is);
 

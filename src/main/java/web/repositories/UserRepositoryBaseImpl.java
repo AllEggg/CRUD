@@ -7,8 +7,9 @@ import web.entities.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+
 @Repository
-public class UserRepositoryBaseImpl implements UserRepository{
+public class UserRepositoryBaseImpl implements UserRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -40,7 +41,6 @@ public class UserRepositoryBaseImpl implements UserRepository{
 
         return user;
     }
-
 
 
     @Override

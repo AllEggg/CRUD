@@ -11,7 +11,8 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encodingFilter", new CharacterEncodingFilter());
+        FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encodingFilter",
+                new CharacterEncodingFilter());
         encodingFilter.setInitParameter("encoding", "UTF-8");
         encodingFilter.setInitParameter("forceEncoding", "true");
         encodingFilter.addMappingForUrlPatterns(null, true, "/*");
@@ -32,9 +33,8 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/users"};
+        return new String[]{"/"};
     }
-
 
 
 }
